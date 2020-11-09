@@ -1,0 +1,72 @@
+
+
+<nav id="navbar-example2" class="navbar navbar-light bg-light">
+    <a class="navbar-brand" href="#">Blog</a>
+    <ul class="nav nav-pills">
+      <li class="nav-item">
+        <a class="nav-link" href="#fat">@vinos</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#mdo">@comentarions</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Viaja</a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="#one">moda</a>
+          <a class="dropdown-item" href="#two">tendencias</a>
+          <div role="separator" class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#three">noticias</a>
+        </div>
+      </li>
+    </ul>
+  </nav>
+  <div data-spy="scroll" data-target="#navbar-example2" data-offset="0">
+    <h4 id="fat">@vinos</h4><br>
+    <div class="container">
+        <img src="assets/img/bodega.jpg" alt="Un buen vino es magia!"><hr>
+    <p>Toda bodega digna de llamarse tal, pone a disposición de
+       sus clientes fichas de cata de sus productos. En ella, se pueden 
+       leer descripciones detalladas que van mas allá de calificativos comunes. 
+       A los no doctos en la materia, nos cuesta seguir el significado, motivo por 
+       el cual hemos pedido a los profesionales de Lugardelvino una pincelada de cultura 
+       enológica que nos indique el Lenguaje del Vino. La memoria gustativa debe precisar 
+       con palabras que describan con detalle las sensaciones que transmite un vino. Para ello 
+       se hace necesario el apunte y un mínimo vocabulario. Suelen abundar distintos 
+       adjetivos, nombres y equiparaciones con los frutos y especias más conocidos. Descubra 
+       las principales notas de tintos, blancos y rosados con ejemplos sencillos de las principales 
+       denominaciones de origen nacionales.</p>
+    </div>
+
+    <h4 id="mdo">@comentarios</h4>
+    <p>Sufriendo cambios continuos!</p>
+    <hr>
+   
+  </div><br> 
+  <div *ngFor="let item of listaBlog">
+    <h6>
+      {{item.nombre}}
+      </h6>
+      <p>
+        {{item.apellido}}
+      </p>
+      <p>
+        {{item.ciudad}}
+      </p>
+      <p>
+        {{item.titulo}}
+      </p>
+      <p>
+        {{item.descripcion}}
+      </p>
+
+  </div>
+  <hr>
+  <button type="button" class="btn btn-outline-primary">pistas</button>
+  <button type="button" class="btn btn-outline-warning">tecnologia</button>
+  <button type="button" class="btn btn-outline-success">blog</button>
+  <button type="button" class="btn btn-outline-warning">noticias</button>
+
+
+
+
+  

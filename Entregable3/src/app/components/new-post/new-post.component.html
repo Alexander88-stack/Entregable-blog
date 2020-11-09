@@ -1,0 +1,88 @@
+ 
+ 
+ <header>
+    <h1>
+        Escibe un post 
+    </h1>
+ </header>
+ <hr>
+
+<div class="container">
+
+
+    <form    [formGroup]="forma" (ngSubmit)="saveForm()" >
+        <div class="form-row">
+          <div class="col-md-6 mb-3">
+            <label for="validationTooltip01">Nombre</label>
+            <input type="text" 
+                class="form-control" 
+                id="validationTooltip01" 
+                name="Nombre" 
+                formControlName="nombre"
+                [class.is-invalid]="nombreInvalido"
+                required>
+            <div class="valid-tooltip">
+              Perfecto!
+            </div>
+          </div>
+          <div class="col-md-6 mb-3">
+            <label for="validationTooltip02">Apellidos</label>
+            <input type="text" 
+                class="form-control" 
+                id="validationTooltip02" 
+                name="apellido"
+                formControlName="apellido"
+                [class.is-invalid]="apellidoInvalido"
+                 required>
+            <div class="valid-tooltip">
+              Perfecto!
+            </div>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="col-md-6 mb-3">
+            <label for="validationTooltip03">Ciudad</label>
+            <input type="text" 
+                class="form-control" 
+                name="ciudad"
+                formControlName="ciudad"
+                [class.is-invalid]="ciudadInvalido"
+                id="validationTooltip03" required>
+            <div class="invalid-tooltip">
+              Porfavor rellena el campo!
+            </div>
+          </div>
+          <div>
+          </div>
+          <div class="col-md-3 mb-3">
+            <label for="validationTooltip05">Titulo</label>
+            <input type="text" name="titulo" 
+                formControlName="titulo" 
+                [class.is-invalid]="ciudadInvalido" 
+                class="form-control" id="validationTooltip05" 
+                placeholder="Titulo post" 
+                required>
+            <div class="invalid-tooltip">
+             
+              
+            </div>
+          </div>
+        </div>
+       
+      
+    <div class="mb-3">
+       <label for="exampleFormControlTextarea1">Descripcion</label>
+       <textarea class="form-control " 
+            id="validationTextarea" 
+            name="descripcion"
+            formControlName="descripcion"
+            [class.is-invalid]="descripcionInvalido"
+            placeholder="Descripcion de tu post" 
+            required></textarea>
+    <div><br>
+
+          <button type="submit" class="btn btn-block btn-primary">Mandar Post</button>
+    </div>
+    </div>
+</form>
+</div>
